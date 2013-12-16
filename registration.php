@@ -7,6 +7,66 @@
 
 </head>
 <body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#registration-button').click(function(){
+		var t=true;
+		var u=$('#username').val();
+		var p=$('#password').val();
+		var e=$('#email').val();
+		var f=$('#firstname').val();
+		var l=$('#lastname').val();
+		var p2=$('#password-confirmation').val();
+		var g=$('#gender-field').val();
+		u=u.trim();
+		p=p.trim();
+		if(u==''){
+			alert('username field is required!');
+			t=false;
+
+		}
+		if(p==''){
+			alert('password field is required!');
+			t=false;
+
+		}
+		if(p2==''){
+			alert('password confirmation field is required!');
+			t=false;
+
+		}
+		if(f==''){
+			alert('Firstname field is required!');
+			t=false;
+
+		}
+		if(l==''){
+			alert('lastname field is required!');
+			t=false;
+
+		}
+		if(g=='none'){
+			alert('gender field is required!');
+			t=false;
+
+		}
+		if(p!=p2){
+			alert('Password and password confirmation doesn\'t match')
+
+		}
+		
+
+		return a;
+		
+	}
+	);
+});
+	
+
+
+
+
+</script>
 <?php 
 /*	
 $firstname = mysql_real_escape_string($_POST['firstname']);
@@ -68,17 +128,17 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[2], $birthDate[1],  $bir
 	<form id='registration-form' method="post" action='registration.php'>
 		
 		<div class='input-label'><div><label >Firstname:</label></div>
-		<div><input class='inputtext' type='text' name='firstname' placeholder='Firstname' /></div></div>
+		<div><input class='inputtext' id='firstname' type='text' name='firstname' placeholder='Firstname' /></div></div>
 		<div class='input-label'><div><label>Lastname:</label></div>
-		<div><input  class='inputtext' type='text' name='lastname' placeholder='Lastname'/></div></div>
+		<div><input  class='inputtext' id='lastname' type='text' name='lastname' placeholder='Lastname'/></div></div>
 		<div class='input-label'><div><label>Username:</label></div>
-		<div><input  class='inputtext' type='text' name='username' placeholder='Username' /></div></div>
+		<div><input  class='inputtext' id='username' type='text' name='username' placeholder='Username' /></div></div>
 	    <div class='input-label'><div><label>Password:</label></div>
-		<div><input class='inputtext'  type='password' name='password' placeholder='Password' /></div></div>
+		<div><input class='inputtext' id='password'  type='password' name='password' placeholder='Password' /></div></div>
 		<div class='input-label'> <div><label>Confirm Password:</label></div>
-		<div><input class='inputtext'  type='password' name='password-confirmation' placeholder='Confirm Password' /></div></div>
+		<div><input class='inputtext' id='password-confirmation' type='password' name='password-confirmation' placeholder='Confirm Password' /></div></div>
 		<div class='input-label'><div><label>E-mail:</label></div>
-		<div><input class='inputtext'  type='text' name='email' placeholder='E-mail' /></div></div>
+		<div><input class='inputtext' id='email' type='text' name='email' placeholder='E-mail' /></div></div>
 		<div class='input-label'><div><label>Date Of Birth:</label></div>
 		<div id='dateofbirth'><div>		<select class='birth-date' name="month" >
 								<option value="1">January</option>

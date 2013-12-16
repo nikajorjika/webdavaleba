@@ -1,0 +1,47 @@
+#login-div{
+display: inline;
+
+
+
+}
+#reg-div{
+display: inline;
+
+
+}
+#all-div{
+
+position: absolute;
+top:200px;
+left: 550px;
+
+
+}
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #70bd18;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+body{
+background-image: url('images/63906.jpg');
+background-repeat: no-repeat;
+background-position:top center;
+background-attachment:fixed;
+
+}
