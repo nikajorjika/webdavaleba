@@ -51,12 +51,12 @@ $(document).ready(function(){
 
 		}
 		if(p!=p2){
-			alert('Password and password confirmation doesn\'t match')
-
+			alert('Password and password confirmation doesn\'t match');
+			t=false;
 		}
 		
 
-		return a;
+		return t;
 		
 	}
 	);
@@ -67,65 +67,10 @@ $(document).ready(function(){
 
 
 </script>
-<?php 
-/*	
-$firstname = mysql_real_escape_string($_POST['firstname']);
-$lastname = mysql_real_escape_string($_POST['lastname']);
-$username = mysql_real_escape_string($_POST['username']);
-$password = mysql_real_escape_string($_POST['password']);
-$passwordconfirmation = mysql_real_escape_string($_POST['password-confirmation']);
-$email = mysql_real_escape_string($_POST['email']);
-$dateofbirth = mysql_real_escape_string($_POST['date-of-birth']);
-$gender = mysql_real_escape_string($_POST['gender']);
 
- $connect=mysqli_connect('localhost:3306','root','', 'users'); 
- if(mysqli_connect_errno())
- 	{ 
- 		echo "failed to connect to mysql database".mysqli_connect_error();
- 	}
- //check username
- 	$query='Select * from users where username='.$username ;
- 	$result = mysqli_query($connect, $query);
- 	if(mysqli_num_rows($result)>=1){
- 		echo 
- 		'<p> Username Is Already Taken</p>';
- 	}
- 	else
- 	{	
- 		if (isset($_POST['submit']))
-{
-$year = $_POST['year'];
-$month = $_POST['month'];
-$day = $_POST['day'];
-if ($year != '' && $month != '' && $day != '') {
-$birthDate = $year.'-'.$month.'-'.$day;
-
-$age = (date("md", date("U", mktime(0, 0, 0, $birthDate[2], $birthDate[1],  $birthDate[0]))) > date("md") ? ((date("Y")-$birthDate[0])-1):(date("Y")-$birthDate[0]));
-
-}}
- 		$query= " ISERT INTO users set(name, lastname, login, password, e-mail, age,  ";
-
-
-
-
- 	}
-
-
- 	
-
-
-
-
-
-
-
-
-*/
-
-?> 
 <div id='form'>
 	<div><h2 id='registration-h'> REGISTRATION</h2></div> 
-	<form id='registration-form' method="post" action='registration.php'>
+	<form id='registration-form' method="post" action='registration-success.php'>
 		
 		<div class='input-label'><div><label >Firstname:</label></div>
 		<div><input class='inputtext' id='firstname' type='text' name='firstname' placeholder='Firstname' /></div></div>
